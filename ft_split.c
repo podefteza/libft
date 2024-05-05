@@ -66,6 +66,14 @@ static char	*split_string(char const *s, char c, size_t *start, size_t *end)
 	return (substring);
 }
 
+char	**free_split(char **split, size_t j)
+{
+	while (j > 0)
+		free (split[--j]);
+	free (split);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -76,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	split = (char **)malloc((string_count(s, c) + 1) * sizeof(char *));
-	if (split == NULL)
+	if (!split)
 		return (NULL);
 	while (s[i])
 	{
@@ -84,6 +92,8 @@ char	**ft_split(char const *s, char c)
 		{
 			start = i;
 			split[j++] = split_string(s, c, &start, &i);
+			if (!split[j - 1])
+				return (free_split(split, j));
 		}
 		else
 			i++;
