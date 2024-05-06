@@ -37,5 +37,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 /* remove comment to test...
 int	main(void)
 {
-	printf("%s\n", ft_strtrim("/-//-/42 Porto/-/", "/-/"));
+	printf("*#*#/#42*#*Porto*#*.*#**#*\n");
+	printf("%s\n", ft_strtrim("*#*#/#42*#*Porto*#*.*#**#*", "*#"));
 }*/

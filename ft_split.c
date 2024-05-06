@@ -6,7 +6,7 @@
 /*   By: carlos-j <carlos-j@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 13:42:36 by carlos-j          #+#    #+#             */
-/*   Updated: 2024/04/25 21:17:39 by carlos-j         ###   ########.fr       */
+/*   Updated: 2024/05/06 09:26:34 by carlos-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ a NULL pointer. */
 
 #include "libft.h"
 
-static size_t	string_count(char const *s, char c)
+static size_t	string_length(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -37,7 +37,7 @@ static size_t	string_count(char const *s, char c)
 	return (count);
 }
 
-static size_t	string_length(char const *s, char c)
+static size_t	delimiter(char const *s, char c)
 {
 	size_t	length;
 
@@ -53,7 +53,7 @@ static char	*split_string(char const *s, char c, size_t *start, size_t *end)
 	size_t	j;
 	char	*substring;
 
-	*end = *start + string_length(s + *start, c);
+	*end = *start + delimiter(s + *start, c);
 	i = *start;
 	j = 0;
 	substring = (char *)malloc((*end - *start + 1) * sizeof(char));
@@ -83,7 +83,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	split = (char **)malloc((string_count(s, c) + 1) * sizeof(char *));
+	split = (char **)malloc((string_length(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
 	while (s[i])

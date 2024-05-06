@@ -32,7 +32,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 /* remove comment to test...
 int	main(void)
 {
-	int	elements = 5;
-	int	size = 3;
+	int	elements = -5;
+	int	size = -3;
 	printf("%p\n", ft_calloc(elements, size));
 }*/

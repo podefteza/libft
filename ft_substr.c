@@ -49,9 +49,4 @@ int	main(void)
 	int start = 3;
 	size_t len = 5;
 	printf("%s\n", ft_substr(s, start, len));
-	
-	char s2[] = "i just want this part #############";
-	int start2 = 0;
-	size_t len2 = 22;
-	printf("%s\n", ft_substr(s2, start2, len2));
 }*/
