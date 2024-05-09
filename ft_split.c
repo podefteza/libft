@@ -6,7 +6,7 @@
 /*   By: carlos-j <carlos-j@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 13:42:36 by carlos-j          #+#    #+#             */
-/*   Updated: 2024/05/06 09:26:34 by carlos-j         ###   ########.fr       */
+/*   Updated: 2024/05/09 08:36:15 by carlos-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ a NULL pointer. */
 
 #include "libft.h"
 
-static size_t	string_length(char const *s, char c)
+static size_t	string_count(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -83,7 +83,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	split = (char **)malloc((string_length(s, c) + 1) * sizeof(char *));
+	split = (char **)malloc((string_count(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
 	while (s[i])
