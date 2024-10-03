@@ -1,4 +1,4 @@
-# Libft - Your Very First Own Library
+# Libft - Your Very First Own Library 📚
 
 C programming can be pretty tough without access to helpful standard functions. This project focuses on understanding, implementing, and using these functions by building my own library. This library, libft, will be super useful for my upcoming projects.
 
