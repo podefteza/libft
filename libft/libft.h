@@ -6,13 +6,14 @@
 /*   By: carlos-j <carlos-j@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 12:17:16 by carlos-j          #+#    #+#             */
-/*   Updated: 2024/04/25 21:18:50 by carlos-j         ###   ########.fr       */
+/*   Updated: 2025/04/07 10:43:00 by carlos-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -44,6 +45,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
 void				*ft_calloc(size_t nmemb, size_t size);
+long long			ft_atoll(const char *nptr);
 
 // Part 2 - Additional functions
 char				*ft_substr(char const *s, unsigned int start, size_t len);
